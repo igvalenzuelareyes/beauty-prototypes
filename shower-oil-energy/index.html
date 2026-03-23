@@ -13,7 +13,7 @@ body{font-family:'Segoe UI', Arial, sans-serif; color:var(--texto); background:l
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 18px;border-bottom:4px solid var(--dorado)}
 .brand img{height:152px;width:auto}
 .badge{background:var(--salvia);color:#fff;padding:10px 18px;border-radius:999px;font-size:20px;letter-spacing:.6px}
-.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
 .card{background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 8px 26px rgba(76,30,115,.12);overflow:hidden}
 .card img{width:100%;display:block}
 .pad{padding:16px 18px}
@@ -25,8 +25,7 @@ thead th{background:#c7d1db;color:#30384a;text-align:left}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 #phase-table .phase-sep td{background:var(--crema);color:var(--texto);font-weight:700;padding:6px 10px 6px 10px !important;text-align:left;border-bottom:1px solid #efe5ff}
 ul.suppliers-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px}
-@media (max-width:900px){.grid{grid-template-columns:1fr}}
-#phase-table table{table-layout:auto;width:100%}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr;width:100%}
 #phase-table th:nth-child(1){width:27%}
 #phase-table th:nth-child(2){width:12%}
 #phase-table th:nth-child(3){width:8%}
@@ -52,7 +51,7 @@ ul.suppliers-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap
 
 <div class="grid">
 <section class="card">
-<img src="images/shower-oil.png" alt="Shower oil prototype"/>
+<img style="width:50%; display:block; margin:0 auto;" src="images/shower-oil.png" alt="Shower oil prototype"/>
 <div class="pad">
 <div class="audio" role="group" aria-label="Prototype soundscape player">
 <svg width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true">
