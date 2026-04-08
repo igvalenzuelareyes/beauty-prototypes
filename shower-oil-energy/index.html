@@ -42,37 +42,29 @@ ul.suppliers-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap
 /* BEAUTY MOBILE PACK by Copi */
 @media (max-width: 768px) {
 
-  /* contenedor scrollable */
-  #phase-table {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
+  /* la tabla ocupa exactamente el ancho del móvil */
   #phase-table table {
     width: 100%;
-    min-width: 680px; /* clave: asegura que todas las columnas existan */
-    border-collapse: collapse;
+    table-layout: fixed;
   }
 
-  /* permitir que el texto haga wrap */
+  /* texto flexible */
   #phase-table th,
   #phase-table td {
     font-size: 13px;
-    padding: 10px 12px;
+    padding: 8px 6px;
     white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
-  /* eliminar anchos forzados SOLO en móvil */
-  #phase-table th {
+  /* quitar anchos forzados de desktop */
+  #phase-table th,
+  #phase-table td {
     width: auto !important;
     min-width: unset !important;
   }
 
-  #phase-table .phase-sep td {
-    font-size: 14px;
-    font-weight: 700;
-    background: #f3f6f8;
-  }
 }
 </style>
 </head>
