@@ -121,56 +121,34 @@ th,td{padding:8px;border-bottom:1px solid #eee;}
 .suppliers-list{list-style:none;padding-left:0;}
 @media (max-width: 600px) {
 
-  /* La tabla se convierte en tarjetas */
-  .formulation-table,
-  .formulation-table tbody,
-  .formulation-table tr,
-  .formulation-table td {
+  /* Reducimos tamaños para que quepa en móvil */
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 6px 6px;
+  }
+
+  /* Permitimos scroll horizontal si hace falta */
+  .formulation-table {
     display: block;
-    width: 100%;
-  }
-
-  .formulation-table tr {
-    position: relative;
-    padding: 12px 0 16px;
-    border-bottom: 1px solid #eee;
-  }
-
-  /* Ocultamos columnas secundarias */
-  .col-art,
-  .col-supplier {
-    display: none;
-  }
-
-  /* Ingredient como título */
-  .col-ingredient {
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-
-  /* INCI legible, sin encimarse */
-  .col-inci {
-    padding-right: 60px;
-    line-height: 1.4;
-    font-size: 0.95rem;
-  }
-
-  /* % fijo, estable y centrado */
-  .col-percent {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: 700;
+    overflow-x: auto;
     white-space: nowrap;
   }
 
-  /* Phase */
-  .phase-sep td {
-    display: block;
-    width: 100%;
+  /* Evita que el INCI rompa feo */
+  .col-inci {
+    white-space: normal;
+    word-break: keep-all;
   }
-}
+
+  /* Centrar mejor números */
+  .col-art,
+  .col-percent {
+    text-align: center;
+  }
+
 </style>
 </head>
 
