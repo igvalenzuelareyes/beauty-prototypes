@@ -119,6 +119,58 @@ th,td{padding:8px;border-bottom:1px solid #eee;}
 
 .audio label{font-weight:700;color:#30384a;}
 .suppliers-list{list-style:none;padding-left:0;}
+@media (max-width: 600px) {
+
+  /* La tabla se convierte en tarjetas */
+  .formulation-table,
+  .formulation-table tbody,
+  .formulation-table tr,
+  .formulation-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .formulation-table tr {
+    position: relative;
+    padding: 12px 0 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Ocultamos columnas secundarias */
+  .col-art,
+  .col-supplier {
+    display: none;
+  }
+
+  /* Ingredient como título */
+  .col-ingredient {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  /* INCI legible, sin encimarse */
+  .col-inci {
+    padding-right: 60px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+
+  /* % fijo, estable y centrado */
+  .col-percent {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* Phase */
+  .phase-sep td {
+    display: block;
+    width: 100%;
+  }
+}
 </style>
 </head>
 
