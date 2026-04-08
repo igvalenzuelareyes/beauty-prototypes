@@ -39,32 +39,42 @@ ul.suppliers-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap
 
 #phase-table td, #phase-table th { text-align: left !important; }
 
-/* BEAUTY MOBILE PACK by Copi */
+/* MOBILE – igual que cream.html */
 @media (max-width: 768px) {
 
-  /* la tabla ocupa exactamente el ancho del móvil */
+  /* comportamiento natural de columnas */
   #phase-table table {
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto; /* CLAVE */
   }
 
-  /* texto flexible */
+  /* celdas como cream */
   #phase-table th,
   #phase-table td {
     font-size: 13px;
-    padding: 8px 6px;
-    white-space: normal !important;
-    word-break: break-word;
-    overflow-wrap: anywhere;
+    padding: 8px 8px;
+    white-space: normal;
+    word-break: normal;   /* MUY IMPORTANTE */
+    overflow-wrap: normal;
+    hyphens: auto;
   }
 
-  /* quitar anchos forzados de desktop */
-  #phase-table th,
-  #phase-table td {
-    width: auto !important;
-    min-width: unset !important;
+  /* columnas cortas */
+  #phase-table th:nth-child(2),
+  #phase-table td:nth-child(2),
+  #phase-table th:nth-child(3),
+  #phase-table td:nth-child(3),
+  #phase-table th:last-child,
+  #phase-table td:last-child {
+    white-space: nowrap;
+    text-align: center;
   }
 
+  /* INCI respira */
+  #phase-table th:nth-child(4),
+  #phase-table td:nth-child(4) {
+    word-break: normal;
+  }
 }
 </style>
 </head>
